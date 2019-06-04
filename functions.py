@@ -2,21 +2,22 @@
 # These are the codes to extract data for the api
 import tmdbsimple as tmdb
 import pandas as pd
+from api_key import api_key
 import requests
 
 
 
 analytical_data = pd.read_csv("Analytical_Data.csv")
-tmdb.API_KEY = 'b5b1a2e5b5fb2a50ab7cfd9d31b1a509'
+tmdb.API_KEY = api_key
 
 def title_from_id(id):
-    tmdb.API_KEY = 'b5b1a2e5b5fb2a50ab7cfd9d31b1a509'
+    tmdb.API_KEY = api_key
     movie = tmdb.Movies(id)
     response = movie.info()
     return movie.title
 
 def movie_search(title):
-    tmdb.API_KEY = 'b5b1a2e5b5fb2a50ab7cfd9d31b1a509'
+    tmdb.API_KEY = api_key
     search = tmdb.Search()
     response = search.movie(query=title)
     data = []
@@ -115,7 +116,7 @@ class movie_data():
         response = movie.info()
         return response['homepage']
 def top_movies():
-    tmdb.API_KEY = 'b5b1a2e5b5fb2a50ab7cfd9d31b1a509'
+    tmdb.API_KEY = api_key
     response = requests.get('https://api.themoviedb.org/3/discover/movie?api_key=' + tmdb.API_KEY + '&primary_release_year=2019&sort_by=popularity.desc')
     highest_pop = response.json() # store parsed json response
     highest_pop_films = highest_pop['results']
@@ -142,7 +143,7 @@ def pred_Revenue(movie_name):
     
 
 def top_movies_posters():
-    tmdb.API_KEY = 'b5b1a2e5b5fb2a50ab7cfd9d31b1a509'
+    tmdb.API_KEY = api_key
     response = requests.get('https://api.themoviedb.org/3/discover/movie?api_key=' + tmdb.API_KEY + '&primary_release_year=2019&sort_by=popularity.desc')
     highest_pop = response.json() # store parsed json response
     highest_pop_films = highest_pop['results']
@@ -153,7 +154,7 @@ def top_movies_posters():
     return poster
 
 def top_movies_title():
-    tmdb.API_KEY = 'b5b1a2e5b5fb2a50ab7cfd9d31b1a509'
+    tmdb.API_KEY = api_key
     response = requests.get('https://api.themoviedb.org/3/discover/movie?api_key=' + tmdb.API_KEY + '&primary_release_year=2019&sort_by=popularity.desc')
     highest_pop = response.json() # store parsed json response
     highest_pop_films = highest_pop['results']
@@ -163,7 +164,7 @@ def top_movies_title():
     return title
 
 def top_movies_pop():
-    tmdb.API_KEY = 'b5b1a2e5b5fb2a50ab7cfd9d31b1a509'
+    tmdb.API_KEY = api_key
     response = requests.get('https://api.themoviedb.org/3/discover/movie?api_key=' + tmdb.API_KEY + '&primary_release_year=2019&sort_by=popularity.desc')
     highest_pop = response.json() # store parsed json response
     highest_pop_films = highest_pop['results']
@@ -173,7 +174,7 @@ def top_movies_pop():
     return pop
 
 def poster_path(id, name):
-    tmdb.API_KEY = 'b5b1a2e5b5fb2a50ab7cfd9d31b1a509'
+    tmdb.API_KEY = api_key
     search = tmdb.Search()
     response = search.movie(query=name)
     data = []
@@ -185,7 +186,7 @@ def poster_path(id, name):
     return "https://image.tmdb.org/t/p/original/{}".format(data)
 
 def popularity_num(id, name):
-    tmdb.API_KEY = 'b5b1a2e5b5fb2a50ab7cfd9d31b1a509'
+    tmdb.API_KEY = api_key
     search = tmdb.Search()
     response = search.movie(query=name)
     data = []
@@ -195,7 +196,7 @@ def popularity_num(id, name):
     return str(data)[1:len(data)-3]
 
 def release_date(id, name):
-    tmdb.API_KEY = 'b5b1a2e5b5fb2a50ab7cfd9d31b1a509'
+    tmdb.API_KEY = api_key
     search = tmdb.Search()
     response = search.movie(query=name)
     data = []

@@ -3,13 +3,14 @@ import pandas as pd
 import tmdbsimple as tmdb
 from functions import movie_data,top_movies, act_Revenue, pred_Revenue,top_movies_title, top_movies_posters, top_movies_pop, poster_path, popularity_num,release_date
 import datetime
+from api_key import api_key
 from datetime import datetime
 import requests
 
 app = Flask(__name__)
 
 def movie_search(title):
-    tmdb.API_KEY = 'b5b1a2e5b5fb2a50ab7cfd9d31b1a509'
+    tmdb.API_KEY = api_key
     search = tmdb.Search()
     response = search.movie(query=title)
     data = []
@@ -88,7 +89,7 @@ def method():
 
 @app.route("/search_results/results/<string:id>")
 def results(id):
-    tmdb.API_KEY = 'b5b1a2e5b5fb2a50ab7cfd9d31b1a509'
+    tmdb.API_KEY = api_key
     movie = tmdb.Movies(id)
     response = movie.info()
     movie = movie.title

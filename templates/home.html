@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<div class="jumbotron text-center">
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v3.8.5">
+    <title>Home</title>
+
+    <!-- Bootstrap core CSS -->
+<link href="/docs/4.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+  <div class="navbar navbar-dark bg-dark shadow-sm">
+    <div class="container d-flex justify-content-between">
+      <a href="#" class="navbar-brand d-flex align-items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="mr-2" viewBox="0 0 24 24" focusable="false"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+        <strong>Top Movies by Popularity</strong>
+      </a>
+      
+    </div>
+  </div>
+</header>
+
+<main role="main">
+
+  <div class="album py-5 bg-light">
+    <div class="container">
+
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <img class="card-img-top" src={{pos0}} width="100" height="250" alt="Card image cap">
+            <div class="card-body">
+              <p class="card-text">{{title0}}</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <small class="text-muted">Popularity: {{pop0}}</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <img class="card-img-top" src={{pos1}} width="100" height="250" alt="Card image cap">
+            <div class="card-body">
+              <p class="card-text">{{title1}}</p>
+              <div class="d-flex justify-content-between align-items-center">
+                
+                <small class="text-muted">Popularity: {{pop0}}</small>
+              </div>
+            </div>
+          </div>
+        </div><div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <img class="card-img-top" src={{pos2}} width="100" height="250" alt="Card image cap">
+            <div class="card-body">
+              <p class="card-text">{{title2}}</p>
+              <div class="d-flex justify-content-between align-items-center">
+                
+                <small class="text-muted">Popularity: {{pop2}}</small>
+              </div>
+            </div>
+          </div>
+        </div><div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <img class="card-img-top" src={{pos3}} width="100" height="250" alt="Card image cap">
+            <div class="card-body">
+              <p class="card-text">{{title3}}</p>
+              <div class="d-flex justify-content-between align-items-center">
+                
+                <small class="text-muted">Popularity: {{pop3}}</small>
+              </div>
+            </div>
+          </div>
+        </div><div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <img class="card-img-top" src={{pos4}} width="100" height="250" alt="Card image cap">
+            <div class="card-body">
+              <p class="card-text">{{title4}}</p>
+              <div class="d-flex justify-content-between align-items-center">
+                
+                <small class="text-muted">Popularity: {{pop4}}</small>
+              </div>
+            </div>
+          </div>
+        </div><div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <img class="card-img-top" src={{pos5}} width="100" height="250" alt="Card image cap">
+            <div class="card-body">
+              <p class="card-text">{{title5}}</p>
+              <div class="d-flex justify-content-between align-items-center">
+                
+                <small class="text-muted">Popularity: {{pop5}}</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+</main>
+
+<footer class="pt-4 my-md-5 pt-md-5 border-top">
+    <div class="row">
+      <div class="col-12 col-md">
+        <img class="mb-2" src="https://filmetricscapstone.shinyapps.io/FilMetricsCapstone/_w_4b8cb31f/logo.jpg" alt="logo" width="24" height="24">
+        <small class="d-block mb-3 text-muted">&copy; 2019</small>
+      </div>
+      <div class="col-6 col-md">
+        <h5>Features</h5>
+        <ul class="list-unstyled text-small">
+          <li><a class="text-muted" href="/">Home</a></li>
+          <li><a class="text-muted" href="/about">About Us</a></li>
+          <li><a class="text-muted" href="/Models">Models</a></li>
+          <li><a class="text-muted" href="https://filmetricscapstone.shinyapps.io/FilMetricsCapstone/">Mobile App</a></li>
+          </ul>
+      </div>
+      <div class="col-6 col-md">
+        <h5>Film Matrics</h5>
+        <ul class="list-unstyled text-small">
+          <li>Copyrights Team 64 Film Analytics</li>
+          <li>Contact Information:</a></li>
+          <li><a class="text-muted" href="mailto:omerahmad2018@u.northwestern.edu">Omer Ahmad</a></li>
+          <li><a class="text-muted" href="mailto:jeffreygrobart2019@u.northwestern.edu">Jeff Grobart</a></li>
+        </ul>
+      </div>
+</footer>
+</html>
+  </div>
+{% endblock %}

@@ -5,7 +5,7 @@ pandas==0.22.0
 numpy==1.11.2
 scipy==0.18.1
 scikit-learn>=0.18
-requests == 2.22.0
+requests == 2.31.0
 tmdbsimple == 2.2.0
 
 
